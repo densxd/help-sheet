@@ -70,12 +70,20 @@ const RandomNumber = (min, max) => {
 }
 
 const RandomChar = (max, caps) => {
-    let karakterler = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    if(caps){karakterler = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];}
+    let chars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    if(caps){chars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];}
     let value = "";
     for (let i = 0; i < max; i++) {
-        value += Shuffle(karakterler)
+        value += Shuffle(chars)
     }
     return value;
 }
-module.exports = { Find, ObjFind, EzPush, EzPull, Shuffle, Sleep, RandomNumber, RandomChar }
+
+const CheckReg = (content,option) => {
+    let inviteRegex = /(https:\/\/)?(www\.)?(discord\.gg|discord\.me|discordapp\.com\/invite|discord\.com\/invite)\/([a-z0-9-.]+)?/i;  
+    let linkRegex = /(http[s]?:\/\/)(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)/gi;
+    if(option && option == 'invite' || option == 'davet') return inviteRegex.test(content);
+    else if(option && option == 'link') return linkRegex.test(content);
+
+}
+module.exports = { Find, ObjFind, EzPush, EzPull, Shuffle, Sleep, RandomNumber, RandomChar, CheckReg }
