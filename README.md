@@ -6,4 +6,4 @@ Kendim için işlerimi kolaylaştırmak adına yaptığım bir modül.
 
 
 Githubum: https://github.com/densxd
-\nPackage Github: https://github.com/densxd/help-sheet
+Package Github: https://github.com/densxd/help-sheet
