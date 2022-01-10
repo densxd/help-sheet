@@ -1,4 +1,3 @@
-const crypto = require('crypto')
 let result;
 /**
  * @param { Array } array
