@@ -17,5 +17,8 @@
     "help-sheet"
   ],
   "author": "Dens",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "help-sheet": "^0.0.2"
+  }
 }
