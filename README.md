@@ -9,9 +9,12 @@ Kendim için işlerimi kolaylaştırmak adına yaptığım bir modül.
 Türkçe küfür regex desteği eklendi.
 3 Adet regex kontrol ettirme vardır Invite/Link/Küfür sonucunu Boolean verir.
 
+Delete eklendi. Mesajlarınızı istediğiniz zaman sildirtebilirsiniz. Discord mesajları için geçerli.
 # Örnek kullanımlar
 ```js
-const { Find, ObjFind, EzPush, EzPull, Shuffle, Sleep, RandomNumber, RandomChar, CheckReg } = require('help-sheet')
+const { Find, ObjFind, EzPush, EzPull, Shuffle, Sleep, RandomNumber, RandomChar, CheckReg, Delete} = require('help-sheet')
+
+message.channel.send({content: 'Havalı bir mesaj!'}).Delete(ms)
 
 CheckReg("orospu", "küfür") sonuc > true
 CheckReg("discord.gg/", "invite") sonuc > true
