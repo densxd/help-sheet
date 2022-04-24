@@ -16,9 +16,9 @@ const { Find, ObjFind, EzPush, EzPull, Shuffle, Sleep, RandomNumber, RandomChar,
 
 message.channel.send({content: 'Havalı bir mesaj!'}).Delete(ms)
 
-CheckReg("orospu", "küfür") sonuc > true
-CheckReg("discord.gg/", "invite") sonuc > true
-CheckReg("https://github.com/densxd", "link") sonuc > true
+CheckReg("orospu", "küfür") sonuc = true
+CheckReg("discord.gg/", "invite") sonuc = true
+CheckReg("https://github.com/densxd", "link") sonuc = true
 
 
 const mongoose = require('mongoose');
